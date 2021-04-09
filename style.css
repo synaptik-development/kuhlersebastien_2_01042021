@@ -86,45 +86,51 @@ header a:hover
 nav
 {
     height: 16%;
-    max-height: 380px;
 }
 
-.recherche
+.champ_de_recherche
 {
-    height: 40px;
-    width: 20%;
-    border: 0 solid #deebff;
-    border-radius: 15px;
+    margin: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
 }
 
-.search
+.rch 
 {
     height: 40px;
-    border: none;
-    margin: auto;
+    font-weight: bolder;
+    vertical-align: middle;
+}
+            
+.bouton 
+{
+    background-color: #0065FC;
+    color: white;
+    width: 150px;
+    text-align: center;
+    border-width: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+            
+.champ  
+{                
+    text-align: center;
+    border: #F2F2F2 01px solid;
+    font-size: 0.8em;
 }
 
-.recherche i
-{
-    width: 40px;
-    padding: 12px 5px 0 25px;
-    border: none solid #deebff;
-    background-color: #deebff;
+.left 
+{                
+    background-color: #DEEBFF;
+    color: black;
+    text-align: center;                
+    width:60px;                
     border-radius: 15px 0 0 15px;
 }
-
-button
+          
+.icon 
 {
-    height: 40px;
-    width: 90px;
-    border: none solide #0065fc;
-    border-radius: 0 15px 15px 0;
-    color: white;
-    background-color: #0065fc;
+    padding-top: 10px;
 }
 
 nav ul

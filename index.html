@@ -27,20 +27,12 @@
         <nav>
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
-                
-                <!--création d'un formulaire de recherche avec Marseille en placeholder 
-                pour une correspondance avec la maquette-->
-             
-                <form method="post" action="traitement.php" class="position">
-            <!--balise pour l'icône de position, quelques essais infructueux avant de 
-            trouver comment saisir le code pour que l'affichage soit optimal-->
-            <div class="recherche"> 
-                    <i class="fas fa-map-marker-alt">
-                        <label for="search"></label></i>
-                        <input type="search" value="Moutiers, Meurthe-et-Moselle" name="search" class="search" placeholder="Marseille, France"/>
-                        <button>Rechercher</button>
-                </form>
-            </div>    
+
+            <div class="champ_de_recherche">
+                <div class="rch left"><i class="fas fa-map-marker-alt icon"></i></div>
+                <div><input type="text" class="rch champ" placeholder="Moutiers, Meurthe-et-Moselle" value="Marseille, France"/></div>
+                <div><button class="rch bouton" onclick="alert('il y a encore du taf');">Rechercher</button></div>
+            </div>   
 
             <!--difficultés à faire un cercle autour des icônes et à réduire la taille de la bordure en fonction du contenu-->
                 <ul><h2>Filtres</h2>
