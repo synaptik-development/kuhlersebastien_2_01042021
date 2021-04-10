@@ -108,15 +108,15 @@ nav
     width: 150px;
     text-align: center;
     border-width: 0px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-radius: 0 15px 15px 0;
 }
             
 .champ  
 {                
     text-align: center;
-    border: #F2F2F2 01px solid;
+    border: #f2f2f2 01px solid;
     font-size: 0.8em;
+    height: 36px;
 }
 
 .left 
@@ -124,7 +124,7 @@ nav
     background-color: #DEEBFF;
     color: black;
     text-align: center;                
-    width:60px;                
+    width:60px;               
     border-radius: 15px 0 0 15px;
 }
           
