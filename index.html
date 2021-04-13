@@ -15,10 +15,11 @@
 
     <body>
         <header>
-            <img class="top" src="images/logo.png" alt="logo_reservia"/>
-                    <a class="bot" href="#hebergements">Hébergements</a>
-                    <a class="bot" href="#activites">Activités</a>
-                    <a class="top" href="pages/formulaire.html">S'inscrire</a>
+                <img class="top" src="images/logo.png" alt="logo_reservia"/>
+
+                <a class="header-a bot" href="#hebergements">Hébergements</a>
+                <a class="header-a bot" href="#activites">Activités</a>
+                <a class="header-a top" href="pages/formulaire.html">S'inscrire</a>
         </header>
 
 <!--nav filtres et outil de recherche
@@ -29,9 +30,18 @@
                 <p>En plein centre ville ou en pleine nature</p>
 
             <div class="champ_de_recherche">
-                <div class="rch left"><i class="fas fa-map-marker-alt icon"></i></div>
-                <div><input type="text" class="rch champ" placeholder="Moutiers, Meurthe-et-Moselle" value="Marseille, France"/></div>
-                <div><button class="rch bouton" onclick="alert('il y a encore du taf');">Rechercher</button></div>
+                <div class="rch left">
+                    <i class="fas fa-map-marker-alt icon"></i>
+                </div>
+                <div>
+                    <input type="text" class="rch champ" placeholder="Moutiers, Meurthe-et-Moselle" value="Marseille, France"/>
+                </div>
+                <div>
+                    <button class="rch bouton" onclick="alert('il y a encore du taf');">
+                        <span class="search_txt">Rechercher</span>
+                            <i class="fas fa-search"></i>
+                    </button>
+                </div>
             </div>   
 
             <!--difficultés à faire un cercle autour des icônes et à réduire la taille de la bordure en fonction du contenu-->
@@ -43,8 +53,8 @@
 
                     <a class="filtre" href="familial">
                         <div class="ico"><i class="fas fa-child"></i></div>
-                        <div class="txt"><li>Familial</li>
- </div>                   </a>
+                        <div class="txt"><li>Familial</li></div>
+                   </a>
 
                     <a class="filtre" href="romantique">
                         <div class="heart"><i class="fas fa-heart"></i></div>
