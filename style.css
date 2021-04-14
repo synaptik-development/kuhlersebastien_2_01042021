@@ -55,7 +55,6 @@ ul
  {
      height: 8%;
      display: flex;
-     flex-direction: row;
      justify-content: space-between;
      align-items: center;
  }
@@ -67,17 +66,19 @@ header img
     margin-bottom: 15px;
 }
 
-header a 
+.header-a 
 {
-    margin-left: 20px;
-    font-size: 1em;
+    padding: 2rem;
+    padding-top: 60px;
 }
 
-header a:hover
+.header-a:hover
 {
      text-decoration: underline;
      color: #0065fc;
+     border-top: 2px solid #0065fc;
 }
+
 
 /*----------mise en forme <nav>----------
 ------------------------------------------
@@ -90,7 +91,7 @@ nav
 .champ_de_recherche
 {
     margin: 20px;
-    display: flex;
+    display: inline-flex;
 }
 
 .rch 
@@ -99,7 +100,11 @@ nav
     font-weight: bolder;
     vertical-align: middle;
 }
-            
+
+.left{
+    width: 1rem;
+}
+
 .bouton 
 {
     background-color: #0065FC;
@@ -108,6 +113,13 @@ nav
     text-align: center;
     border-width: 0px;
     border-radius: 0 15px 15px 0;
+    font-weight: 1em;
+}
+
+.bouton i 
+{
+    color: white;
+    visibility: hidden;
 }
             
 .champ  
@@ -474,6 +486,37 @@ footer li
     }
 }
 
+@media screen and (max-width: 755px)
+{
+   
+
+    .bot:hover{
+        text-decoration: none;
+        color: #0065fc;
+        border-bottom: 2px solid #0065fc;
+        border-top: none;
+    }
+
+    .bot 
+    {
+        align-self: flex-end;
+        justify-content: space-around;
+    }
+
+    .top 
+    {
+        justify-content: space-between;
+        align-self: flex-start;
+    }
+
+    .header-a.top{
+        align-self: flex-start;
+        margin-top: 0%;
+        padding-top: 1rem;
+    }
+
+}
+
 @media screen and (max-width: 980px)
 {
     body 
@@ -504,16 +547,7 @@ footer li
         flex-direction: column;
     }
 
-    .bot 
-    {
-        align-self: flex-end;
-        justify-content: space-between;
-    }
-
-    .top 
-    {
-        justify-self: space-around;
-    }
+    
 
     .section1
     {
@@ -614,10 +648,25 @@ footer li
         width: 100%;
     }
 
+    .search_txt
+    {
+        display: none;
+    }
+
+    .button i 
+    {
+        display: block;
+    }
+
     header
     {
         align-items: center;
     }
+
+    .bouton i 
+{
+    visibility: visible;
+}
 
 
 }
