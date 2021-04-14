@@ -675,11 +675,13 @@ footer li
 
     .section1
     {
-        margin-right: 0;
-        margin-left: 70px;
-        width: 350px;
+        width: 135%;
     }
 
-   
+    .section2
+    {
+        width: 135%;
+    }
+
 
 }
