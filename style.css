@@ -58,8 +58,9 @@ ul
     box-shadow: 1px 1px 5px grey;
     scale: 2 0.7;
 }
+
 .grid{
-    margin: 0;
+    margin-top: 20px;
     width: 100%;
     gap: 28px;
 }
@@ -85,31 +86,32 @@ figcaption{
 /*-------------------header-----------------------
 --------------------------------------------------
 -------------------------------------------------*/
-.header{
-    /*height: 180px;*/
+header{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .logo img{
     width: 110px;
 }
 
-.nav{
+nav{
+    align-self: flex-end;
+    justify-self: flex-start;
     display: flex;
     justify-content: space-between;
+    margin-top: -35px;
 }
 
-.nav__item{
+nav span{
     margin-left: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-top: -60px;
+    padding-top: 58px;
 }
 
 .nav__item:hover{
     border-top: #0065fc solid 2px;
-    padding-top: 56px;
-    margin-top: -56px;
+    
 }
 
 .nav__item--inscription a{
@@ -123,7 +125,9 @@ figcaption{
 /*-------------------options-----------------------
 --------------------------------------------------
 -------------------------------------------------*/
-
+.options{
+    height: 11%;
+}
 /*champ de recherche*/
 .btn{ 
     display: flex;
@@ -168,6 +172,7 @@ input{
 /*filtres*/
 .filters{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .filter{
@@ -204,6 +209,7 @@ input{
 .corps{
     display: flex;
     justify-content: space-between;
+    height: 39%;
 }
 
 .master{
@@ -235,26 +241,33 @@ input{
 --------------------------------------------------
 -------------------------------------------------*/
 main{
-    width: 60%;
+    width: 62%;
     display: flex;
     flex-direction: column;
 }
 
 .main__grid{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    /*display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);*/
 }
 
 .card--main img{
     border-radius: 15px 15px 0 0;
     width: 96%;
     height: 110px;
-    padding: 5px 5px 0 5px;
+    margin: 5px;
+}
+
+.card--main{
+    width: 270px;
+    margin: auto;
 }
 
 .more{
-    margin-top: 40px;
+    margin-top: 70px;
     font-weight: bold;
 }
 
@@ -267,12 +280,14 @@ main{
 --------------------------------------------------
 -------------------------------------------------*/
 aside{
-    width: 32%;
+    width: 30%;
 }
 
 .aside__grid{
-    display: grid;
-    grid-template: repeat(3, 1fr) / 1fr;
+    display: flex;
+    flex-direction: column;
+    /*display: grid;
+    grid-template: repeat(3, 1fr) / 1fr;*/
 }
 
 .aside__title{
@@ -288,17 +303,15 @@ aside{
 .card--aside{
     display: flex;
     flex-direction: row;
+    height: 120px;
+    margin-bottom: 10px;
 }
 
 .card--aside img{
     width: 100px;
-    height: 120px;
+    height: 110px;
     border-radius: 15px 0 0 15px;
-    padding: 5px 0 2px 5px;
-}
-
-.card--aside{
-    margin-bottom: 10px;
+    margin: 5px;
 }
 
 .card--aside .figure__title{
@@ -312,6 +325,8 @@ aside{
 section{
     display: flex;
     flex-direction: column;
+    height: 30%;
+    margin-top: 40px;
 }
 
 section .title{
@@ -345,7 +360,7 @@ section .title{
 
 .card--section img{
     border-radius: 15px 15px 0 0;
-    width: 100%;
+    width: 100.1%;
 }
 
 .card--vieux-port{
@@ -381,14 +396,171 @@ section .title{
 --------------------------------------------------
 -------------------------------------------------*/
 footer{
-    height: 11.6%;
+    height: 10%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    background-color: #f2f2f2;
+    padding-top: 30px;
+    margin-top: 30px;
 }
 
 footer ul{
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
 
+.footer__title{
+    font-size: 1em;
+    margin-left: 40px;
+}
 
+/*---------------media query----------------------
+--------------------------------------------------
+-------------------------------------------------*/
+@media screen and (max-width: 1400px) {
+    body{
+        padding: 10px;
+    }
+
+    .card--main{
+        width: 220px;
+    }
+    
+}
+
+@media screen and (max-width: 1150px){
+    .corps{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .master{
+        width: 100%;
+    }
+
+    main{
+        margin-top: 30px;
+    }
+
+    .card--aside{
+        width: 450px;
+    }
+
+    .aside__grid{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+@media screen and (max-width: 990px){
+
+    .small{
+        height: 390px;
+    }
+
+    .card--aside{
+        width: 400px;
+    }
+
+    .section__grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 690px){
+    body{
+        margin: 0;
+        padding: 5px;
+    }
+
+    .master{
+        width: 100%;
+    }
+    .main__grid{
+        flex-direction: column;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .card--section {
+        width: 105%;
+    }
+
+    .card--main img{
+        width: 98.3%;
+        height: 250px;
+    }
+
+    footer{
+        grid-template: repeat(3, 1fr) / 1fr;
+    }
+}
+
+@media screen and (max-width: 450px){
+    body{
+        padding: 5px;
+    }
+
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .master{
+        margin-left: 10px;
+    }
+
+    .nav__item--hebergements:hover, .nav__item--activites:hover{
+        border-top: none;
+        border-bottom: #0065fc solid 2px;
+    }
+
+    .card--main img{
+        width: 97%;
+        height: 115px;
+    }
+
+    .card--section img{
+        height: 130px;
+    }
+
+    .section__grid{
+        margin-left: 10px;
+    }
+
+    .nav__item--hebergements, .nav__item--activites{
+        justify-self: flex-start;
+        margin-top: 10px;
+    }
+
+    nav{
+        width: 100%;
+        border-bottom: #d9d9d9 solid 1px;
+    }
+
+    .btn{
+        width: 100%;
+    }
+
+    .btn__button--txt{
+        display: none;
+    }
+
+    .btn__button--icon{
+        display: inline;
+        color: white;
+        background-color: #0065fc;
+        border-radius: 0 15px 15px 0;
+        height: 100%;
+        width: 65px;
+        border: none;
+    }
+
+    .btn__button--icon i{
+        color: white;
+    }
+}

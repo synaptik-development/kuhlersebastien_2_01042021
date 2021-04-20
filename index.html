@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-<html>
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="style.css" />
@@ -14,41 +13,38 @@
     </head>
 
     <body>
-<!--------------en-tête---------------
---------------------------------------
--------------------------------------->
-    <div class="header">
+<!--------------en-tête--------------->
+    <!--<div class="header">-->
         <header>
-            <div class="logo"><img src="images/logo.png" alt="logo_reservia"/></div>
-            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <div class="logo">
+                <img src="images/logo.png" alt="logo_reservia"/>
+            </div>
+            <nav>
+                    <span class="nav__item nav__item--hebergements"><a href="#hebergements">Hébergements</a></span>
+                    <span class="nav__item nav__item--activites"><a href="#activites">Activités</a></span>
+                    <span class="nav__item nav__item--inscription"><a href="pages/formulaire.html">S'inscrire</a></span>
+            </nav>
+            <div class="header__legend">
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
+            </div>
         </header>
-
-        <nav>
-            <ul class="nav">
-                <li class="nav__item nav__item--hebergements"><a href="#hebergements">Hébergements</a></li>
-                <li class="nav__item nav__item--activites"><a href="#activites">Activités</a></li>
-                <li class="nav__item nav__item--inscription"><a href="pages/formulaire.html">S'inscrire</a></li>
-            </ul>
-        </nav>
-    </div>
-<!---------options et filtres---------
---------------------------------------
--------------------------------------->
+    
+<!---------options et filtres--------->
         <div class="options">
             <form action="" method="GET" class="btn">
                 <span class="btn--icon"><i class="fas fa-map-marker-alt"></i></span>
                 <input type="text" class="btn--area" placeholder="Moutiers, Meurthe-et-Moselle" value="Marseille, France"/>
-                    <button class="btn__button--txt hover" onclick="alert('il y a encore du taf')";>
+                    <button class="btn__button--txt hover" onclick="alert('il y a encore du taf')">
                         Rechercher
                     </button>
-                    <button class="btn__button--icon hover" onclick="alert('il y a encore du taf')";>
+                    <button class="btn__button--icon hover" onclick="alert('il y a encore du taf')">
                         <i class="fas fa-search"></i>
                     </button>
             </form>
 
             <form action="" method="GET" class="filters">
-                <span><h2>Filtres</h2></span>
+                <div><h2>Filtres</h2></div>
 
                 <a class="filter hover" href="economique">   
                     <span class="filter__ico icon--bill"><i class="fas fa-money-bill-wave"></i></span>
@@ -75,11 +71,9 @@
                     Plus de 500 logements sont disponibles dans cette ville 
                 </p>
         </div>
-<!---------corps de page-------------
---------------------------------------
--------------------------------------->
+<!---------corps de page------------->
         <div class="corps">
-            <main class="master">
+            <main class="master" id="hebergements">
                 <div class="title">
                     <h2>Hébergements à Marseille</h2>
                 </div>
@@ -93,7 +87,6 @@
                                     <h3>Auberge de la Cannebière</h3>
                                         <p>Nuit à partir de 25€</p>
                                 </div>
-                            </a>
                                 <div class="card__notation">
                                     <a href="#5" title="5 étoiles"><i class="fas fa-star"></i></a>
                                     <a href="#4" title="4 étoiles"><i class="fas fa-star"></i></a>
@@ -102,7 +95,7 @@
                                     <a href="#1" title="1 étoile "><i class="fas fa-star"></i></a>
                                 </div>
                             </figcaption>
-                       <!-- </a>-->
+                        </a>
                     </figure>
 
                     <figure class="card card--main hover">
@@ -269,10 +262,8 @@
                 </div>
             </aside>
         </div>
-<!--------liste des activités--------
---------------------------------------
--------------------------------------->
-        <section>
+<!--------liste des activités-------->
+        <section id="activites">
             <div class="title">
                 <h2>Activités à Marseille</h2>
             </div>
@@ -289,7 +280,7 @@
 
                 <figure class="card card--section card--pomegues hover">
                     <a href="#" src="">
-                        <img class="pomegues" src="./images/pomegues.jpg" alt="pomegues">
+                        <img class="pomegues small" src="./images/pomegues.jpg" alt="pomegues">
                         <figcaption>
                             <h3>Fort de Pomègues</h3>
                         </figcaption>
@@ -298,7 +289,7 @@
                 
                 <figure class="card card--section card--frioul hover">
                     <a href="#" src="">
-                        <img class="frioul" src="./images/frioul.jpg" alt="frioul">
+                        <img class="frioul small" src="./images/frioul.jpg" alt="frioul">
                         <figcaption>
                             <h3>Île de Frioul</h3>
                         </figcaption>
@@ -316,7 +307,7 @@
                 
                 <figure class="card card--section card--notre-dame hover">
                     <a href="#" src="">
-                        <img class="notre-dame" src="./images/notre_dame.jpg" alt="notre dame de la garde">
+                        <img class="notre-dame small" src="./images/notre_dame.jpg" alt="notre dame de la garde">
                         <figcaption>
                             <h3>Notre-Dame-de-la-Garde</h3>
                         </figcaption>
@@ -325,7 +316,7 @@
 
                 <figure class="card card--section card--longchamp hover">
                     <a href="#" src="">
-                        <img class="longchamp" src="./images/longchamp.jpg" alt="longchamp">
+                        <img class="longchamp small" src="./images/longchamp.jpg" alt="longchamp">
                         <figcaption>
                             <h3>Longchamp</h3>
                         </figcaption>
@@ -333,12 +324,10 @@
                 </figure>
             </div>
         </section>
-<!-----------pied de page------------
---------------------------------------
--------------------------------------->
-        <!--<footer>
+<!-----------pied de page------------>
+        <footer>
             <div class="footer">
-                <h2>A propos</h2>
+                <h2 class="footer__title">A propos</h2>
                 <ul class="about">
                 
                         <a href="#"><li>Fonctionnement du site</li></a>
@@ -348,7 +337,7 @@
             </div>
 
             <div class="footer">
-                <h2>Nos hébergements</h2>
+                <h2 class="footer__title">Nos hébergements</h2>
                 <ul class="accomodations">
                 
                         <a href="#"><li>Charte qualité</li></a>
@@ -357,14 +346,14 @@
             </div>
 
             <div class="footer">
-                <h2>Assistance</h2>
+                <h2 class="footer__title">Assistance</h2>
                 <ul class="assistance">
                 
                         <a href="#"><li>Centre d'aide</li></a>
                         <a href="#"><li>Nous contacter</li></a>
                 </ul>
             </div>
-        </footer>-->
+        </footer>
 
     </body>
 </html>
