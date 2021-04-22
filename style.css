@@ -56,7 +56,7 @@ ul
 
 .hover:hover{
     box-shadow: 1px 1px 5px grey;
-    scale: 2 0.7;
+    /*scale: 2 0.7;*/
     cursor: pointer;
 }
 
@@ -372,7 +372,7 @@ section{
 
 .card--section img{
     border-radius: 15px 15px 0 0;
-    width: 100.1%;
+    width: 100%;
 }
 
 .card--vieux-port{
@@ -504,7 +504,6 @@ footer ul{
     }
 
     .nav{
-        margin-left: -40px;
         gap: 20%;
     }
 
@@ -537,8 +536,6 @@ footer ul{
         margin-right: -100%;
     }
 
-
-    
     .card--section img{
         height: 400px;
     }
@@ -561,6 +558,14 @@ footer ul{
     body{
         margin: 0;
         padding: 5px;
+    }
+
+    .master{
+        padding-left: 10px;
+    }
+
+    .title{
+        margin-left: 5px;
     }
 
     .main__grid{
