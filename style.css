@@ -44,7 +44,6 @@ ul
     background-color: white;
     margin: auto;
     width: 100%;
-    /*margin-top: 20px;*/
 }
 
 .card--main, .card--section{
@@ -58,7 +57,7 @@ ul
     cursor: pointer;
 }
 
-.grid{
+.section__grid{
     margin-top: 20px;
     gap: 20px;
 }
@@ -73,19 +72,10 @@ img{
     padding-top: 0;
 }
 
-/*.card__description{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    padding: 2px 0 5px 2px;
-}/*
-
 /*-------------------header-----------------------
 --------------------------------------------------
 -------------------------------------------------*/
 header{
-    /*padding-top: 20px;*/
     height: 11%;
 }
 
@@ -153,7 +143,7 @@ header{
 }
 /*champ de recherche*/
 .btn{ 
-    display: flex;
+    display: inline-flex;
     height: 40px;
     width: 300px;
     border: 1px solid #DEEBFF;
@@ -162,6 +152,8 @@ header{
 }
 
 .btn--icon{
+    display: inline;
+    float: left;
     background-color: #DEEBFF;
     border-radius: 15px 0 0 10px;
     height: 100%;
@@ -170,22 +162,23 @@ header{
 }
 
 .btn--icon i{
-    margin: 12px 0 0 10px;
+    margin: 12px 0 0 13px;
+    
 }
 
 input{
     border: none;
     width: 305px;
-    padding-left: 10px;
     font-weight: bold;
     font-size: 1em;
 }
 
 .btn__button--txt{
+    display: inline;
+    float: inline-end;
     color: white;
     background-color: #0065fc;
     border-radius: 0 15px 15px 0;
-    height: 100%;
     border: none;
 }
 
@@ -250,7 +243,15 @@ input{
 .corps{
     display: flex;
     justify-content: space-between;
-    /*height: 20%;*/
+}
+
+.aside__grid, .main__grid{
+    margin: 20px;
+    gap: 30px;
+}
+
+.corps .title, .more{
+    margin-left: 25px;
 }
 
 .master{
@@ -431,7 +432,7 @@ section{
 }
 
 .card--notre-dame img{
-    height: 176px;
+    height: 196px;
 }
 
 .card--longchamp{
@@ -440,8 +441,7 @@ section{
 }
 
 .card--longchamp img{
-    height: 176px;
-    margin-top: -20px;
+    height: 156px;
 }
 
 /*--------------------footer----------------------
@@ -550,7 +550,11 @@ footer ul{
     }
 
     .section__grid img, .main__grid img{
-        height: 125px;
+        height: 250px;
+    }
+
+    .card--section{
+        margin-bottom: 20px;
     }
 
     footer{
@@ -565,5 +569,9 @@ footer ul{
 
     .btn--icon i{
         margin-left: 45%;
+    }
+
+    .section__grid img, .main__grid img{
+        height: 125px;
     }
 }
