@@ -1,4 +1,5 @@
 body{
+    /*width: 1400px;*/
     font-family: 'Raleway', sans-serif;
     padding: 0 30px 10px 30px;
     background-color: #ffff;
@@ -35,18 +36,14 @@ ul
     list-style-type: none;
 }
 
-.options i{
-    color: #0065fc;
-}
-
 .card{
-    border: 0px black solid;
-    box-shadow: 1px 1px 1px grey;
+    /*border: 0px black solid;*/
+    box-shadow: 1px 1px 5px grey;
     border-radius: 15px;
     background-color: white;
     margin: auto;
     width: 100%;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 
 .card--main, .card--section{
@@ -56,13 +53,13 @@ ul
 
 .hover:hover{
     box-shadow: 1px 1px 5px grey;
-    /*scale: 2 0.7;*/
+    /*scale: 2 0.7;*/ /*incompatible firefox*/
     cursor: pointer;
 }
 
 .grid{
     margin-top: 20px;
-    gap: 28px;
+    gap: 20px;
 }
 
 img{
@@ -75,13 +72,13 @@ img{
     padding-top: 0;
 }
 
-.card__description{
+/*.card__description{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 0 0 10px 10px;
-}
+    padding: 2px 0 5px 2px;
+}/*
 
 /*-------------------header-----------------------
 --------------------------------------------------
@@ -117,15 +114,23 @@ header{
 .nav__item--inscription{
     grid-area: 1 / 4 / 2 / 5;
     justify-self: end;
+    font-weight: bold;
 }
 
 .nav__item--inscription a{
     color: #0065fc;
+}
+
+.nav__item--inscription:hover{
     text-decoration: underline;
 }
 
 .nav__item{
     margin-top: 15px;
+}
+
+.nav__item a:hover{
+    color: #0065fc;
 }
 
 .nav__item--activites:hover, .nav__item--hebergements:hover{
@@ -136,6 +141,7 @@ header{
     margin-left: -30%;
     padding-right: 30%;
     margin-right: -30%;
+    color: #0065fc;
 }
 
 /*-------------------options-----------------------
@@ -148,7 +154,7 @@ header{
 .btn{ 
     display: flex;
     height: 40px;
-    width: 400px;
+    width: 300px;
     border: 1px solid #DEEBFF;
     border-radius: 15px;
     border-right: none;
@@ -156,13 +162,14 @@ header{
 
 .btn--icon{
     background-color: #DEEBFF;
-    border-radius: 15px 0 0 15px;
+    border-radius: 15px 0 0 10px;
     height: 100%;
     width: 55px;
+    padding-right: 10px;
 }
 
 .btn--icon i{
-    margin: 12px 0 0 17px;
+    margin: 12px 0 0 10px;
 }
 
 input{
@@ -208,6 +215,7 @@ input{
     background-color: #DEEBFF;
     padding: 12px;
     margin-right: 15px;
+    color: #0065fc;
 }
 
 .icon--child i{
@@ -230,6 +238,10 @@ input{
     padding: 1px;
 }
 
+.position i{
+    color: #0065fc;
+}
+
 /*-------------------master-----------------------
 --------------------------------------------------
 -------------------------------------------------*/
@@ -237,58 +249,54 @@ input{
 .corps{
     display: flex;
     justify-content: space-between;
-    height: 39%;
+    /*height: 20%;*/
 }
 
 .master{
     border-radius: 15px;
     background-color: #F2F2F2;
-    padding: 20px;
+    padding: 10px 20px 10px 10px;
+    margin: 0;
 }
 
-.card__notation{
-    direction: rtl;
-    align-self: flex-start;
+.bold{
+    font-weight: bold;
 }
 
-.card__notation a {
-    color: #d9d9d9;
-    text-decoration: none;
+ .true i{
+    color: #0065FC;
     font-size: 0.8em;
- }
+  }
+  .false i{
+    color: #d9d9d9;
+    font-size: 0.8em;
+  }
 
- .card__notation a:hover,
- .card__notation a:focus,
- .card__notation a:focus~a,
- .card__notation a:hover~a{
-    color: #0065fc;
-    cursor: default;
- }
-
+.card__description{
+    margin: 3px;
+}
 /*-------------------main-------------------------
 --------------------------------------------------
 -------------------------------------------------*/
 main{
-    width: 62%;
+    width: 67%;
     display: flex;
     flex-direction: column;
+    margin-right: 10px;
 }
 
 .main__grid{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
 }
 
 .card--main img{
     border-radius: 15px 15px 0 0;
     width: 100%;
     height: 110px;
-    /*margin: 5px;*/
 }
 
 .card--main{
-    width: 270px;
-    margin: auto;
     padding: 5px;
 }
 
@@ -306,18 +314,18 @@ main{
 --------------------------------------------------
 -------------------------------------------------*/
 aside{
-    width: 30%;
+    width: 25%;
 }
 
 .aside__grid{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
-.figure__title{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+.figure__title--aside h3{
+    line-height: 1em;
 }
 
 .aside__title i{
@@ -334,21 +342,22 @@ aside{
 .card--aside{
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     height: 120px;
-    margin-bottom: 10px;
+    padding: 5px;
 }
 
 .card--aside img{
     width: 100px;
-    height: 110px;
+    height: 120px;
     border-radius: 15px 0 0 15px;
-    margin: 5px;
 }
 
-.card--aside .figure__title{
-    margin-top: 2px;
+aside .card__description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
 
 /*-------------------section----------------------
 --------------------------------------------------
@@ -382,7 +391,7 @@ section{
 }
 
 .card--vieux-port img{
-    height: 428px;
+    height: 420px;
 }
 
 .card--pomegues{
@@ -411,12 +420,12 @@ section{
 }
 
 .card--calanques img{
-    height: 428px;
+    height: 420px;
 }
 
 .card--notre-dame{
     grid-area: 1 / 4 / 2 / 5;
-    align-self: start;
+    /*align-self: start;*/
     margin-top: 0;
 }
 
@@ -426,7 +435,7 @@ section{
 
 .card--longchamp{
     grid-area: 2 / 4 / 3 / 5;
-    align-self: start;
+    margin-top: 20px;
 }
 
 .card--longchamp img{
@@ -464,41 +473,29 @@ footer ul{
 /*---------------media query----------------------
 --------------------------------------------------
 -------------------------------------------------*/
-@media screen and (max-width: 1400px) {
-    body{
-        padding: 10px;
+@media screen and (max-width: 900px){
+    .btn{
+        width: 100%;
     }
 
-    .card--main{
-        width: 220px;
+    .btn__button--txt{
+        display: none;
+    }
+
+    .btn__button--icon{
+        display: inline;
+        color: white;
+        background-color: #0065fc;
+        border-radius: 0 15px 15px 0;
+        height: 100%;
+        width: 65px;
+        border: none;
+    }
+
+    .btn__button--icon i{
+        color: white;
     }
     
-}
-
-@media screen and (max-width: 1150px){
-    .corps{
-        flex-direction: column-reverse;
-        justify-content: center;
-    }
-
-    .master{
-        width: auto;
-    }
-
-    main{
-        margin-top: 30px;
-    }
-
-    .card--aside{
-        width: 450px;
-    }
-
-    .aside__grid{
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-@media screen and (max-width: 990px){
     nav{
         border-bottom: #d9d9d9 1px solid;
     }
@@ -536,39 +533,18 @@ footer ul{
         margin-right: -100%;
     }
 
-    .card--section img{
-        height: 400px;
-    }
-
-    .section__grid{
+    .corps{
         display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-right: 0;
-        padding-right: 0;
-    }
-
-    .card--frioul{
-        margin-top: 0;
-    }
-
-}
-
-@media screen and (max-width: 900px){
-    body{
-        margin: 0;
-        padding: 5px;
+        flex-direction: column-reverse;
     }
 
     .master{
-        padding-left: 10px;
+        width: auto;
+        margin-top: 30px;
     }
 
-    .title{
-        margin-left: 5px;
-    }
-
-    .main__grid{
+    .grid{
+        display: flex;
         flex-direction: column;
     }
 
@@ -576,51 +552,11 @@ footer ul{
         width: 100%;
     }
 
-    .card--main img{
-        height: 250px;
+    .section__grid img, .main__grid img{
+        height: 125px;
     }
 
     footer{
         grid-template: repeat(3, 1fr) / 1fr;
-    }
-}
-
-@media screen and (max-width: 450px){
-    body{
-        padding: 5px;
-    }
-
-    .btn{
-        width: 100%;
-    }
-
-    .btn__button--txt{
-        display: none;
-    }
-
-    .btn__button--icon{
-        display: inline;
-        color: white;
-        background-color: #0065fc;
-        border-radius: 0 15px 15px 0;
-        height: 100%;
-        width: 65px;
-        border: none;
-    }
-
-    .btn__button--icon i{
-        color: white;
-    }
-
-    .card--aside h3{
-        line-height: 0.8em;
-    }
-
-    .card--main img{
-        height: 115px;
-    }
-
-    .card--section img{
-        height: 120px;
     }
 }
