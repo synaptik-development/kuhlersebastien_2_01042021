@@ -146,9 +146,13 @@ header{
     display: inline-flex;
     height: 40px;
     width: 300px;
-    border: 1px solid #DEEBFF;
     border-radius: 15px;
     border-right: none;
+}
+
+.btn--area{
+    border-top: 1px solid #DEEBFF;
+    border-bottom: 1px solid #DEEBFF;
 }
 
 .btn--icon{
@@ -159,6 +163,7 @@ header{
     height: 100%;
     width: 55px;
     padding-right: 10px;
+    margin: auto;
 }
 
 .btn--icon i{
@@ -167,6 +172,7 @@ header{
 }
 
 input{
+
     border: none;
     width: 305px;
     font-weight: bold;
@@ -397,7 +403,7 @@ section{
 }
 
 .card--pomegues{
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1 / 2 / 3 / 3;
     align-self: start;
     margin-top: 0;
 }
@@ -555,6 +561,10 @@ footer ul{
 
     .card--section{
         margin-bottom: 20px;
+    }
+
+    .card--frioul{
+        margin-top: 0;
     }
 
     footer{
