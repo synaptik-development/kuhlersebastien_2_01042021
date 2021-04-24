@@ -443,7 +443,7 @@ section{
 
 .card--longchamp{
     grid-area: 2 / 4 / 3 / 5;
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .card--longchamp img{
@@ -564,6 +564,10 @@ footer ul{
     }
 
     .card--frioul{
+        margin-top: 0;
+    }
+
+    .card--longchamp{
         margin-top: 0;
     }
 
