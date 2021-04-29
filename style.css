@@ -530,8 +530,8 @@ footer ul{
     }
 
     .nav__item--hebergements:hover{
-        padding-left: 100%;
-        margin-left: -100%;
+        padding-left: 35%;
+        margin-left: -35%;
     }
 
     .nav__item--activites:hover{
